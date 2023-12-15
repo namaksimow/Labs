@@ -160,7 +160,7 @@ namespace laboratornayaRabota6
                 userInput = Console.ReadLine();
                 isNumber = int.TryParse(userInput, out number);
 
-                if (isNumber)
+                if (!isNumber)
                 {
                     Console.WriteLine("Это не число, попробуйте снова");
                 }
@@ -250,7 +250,7 @@ namespace laboratornayaRabota6
         {
             bool isPuncMark = true;
 
-            for (int i = 1; i < checkString.Length - 1; i++)
+            for (int i = 0; i < checkString.Length - 1; i++)
             {
                 char firstSymbol = checkString[i];
                 char secondSymbol = checkString[i + 1];
